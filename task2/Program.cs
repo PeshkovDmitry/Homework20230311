@@ -4,7 +4,10 @@ Console.Clear();
 Console.Write("Введите число: ");
 int n = Convert.ToInt32(Console.ReadLine());
 if (n > 99) {
-    // int x = (n%100)/e(x);
+    while (n > 999) {
+        n = n/10;
+    } 
+    Console.Write($"->{n%10}");
 } else {
-    Console.Write($"{n}->третьей цифры нет");
+    Console.Write($"->третьей цифры нет");
 }
